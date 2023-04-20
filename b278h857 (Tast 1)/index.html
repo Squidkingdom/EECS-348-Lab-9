@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body onload="loadColor()" class="bg-black">
+    <img src="settings.png" id="settings" alt="settings" style=" right: calc(-100% + 30px); width: 30px" class="opacity-40  relative pr-px pt-px">
+    <div id="setblock" class="float-right hidden max-w-s whitespace-nowrap">
+      <div style="background-color: rgb(44,44,46);" class="flex flex-col break-words  border-2 rounded shadow-md">
+        <div style="background-color: rgb(72,72,74); color:rgb(199,199,204)" class="font-semibold  py-3 px-6 mb-0">
+          <h1 class="text-center">Settings</h1>
+        </div>
+        <div class="w-full p-6">
+          <form class="">
+            <div class="flex flex-wrap -mx-3 mb-6">
+              <div style="" class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                <label class="block uppercase tracking-wide text-gray-200 text-xs font-bold mt-2 mb-2" for="grid-first-name">
+                  Color
+                </label>
+                <input class="appearance-none block w-full h-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-1 px-2 mt-2 mb-3 leading-tight hover::outline-none hover:border-gray-500" style="max-width: 100%; max-height: 50%;" id="grid-color" type="color" onchange="updateColor(this.value)" value="#FFFFFF">
+              </div>
+              <div class="w-full md:w-1/2 px-3">
+                <label class="block uppercase tracking-wide text-gray-200 text-xs font-bold mt-2 mb-2" for="grid-last-name">
+                  Font Size
+                </label>
+                <input class="block w-full h-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 pr-6 pl-4 mb-3 leading-tight hover:outline-none hover:bg-gray-200 hover:border-gray-500" style="max-width: 100%; max-height: 50%;" id="grid-first-name" type="range" min="64" max="256" value='128' onchange="updateTextSize(this.value)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  <h1 id="timer" style="margin-top: 35vh" class="text-white text-center text-9xl">Loading...</h1>
+
+
+  
+  <script src="app.js"></script>
+</body>
+</html>
